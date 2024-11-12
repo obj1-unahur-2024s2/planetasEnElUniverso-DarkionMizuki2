@@ -69,4 +69,8 @@ class Persona{
     console.println("Edad: "+recursos+" -> "+(0.max(recursos-unaCantidadDeAnios)))
     edad=edad+unaCantidadDeAnios
   }
+
+  method recursos(){
+    return recursos
+  }
 }
