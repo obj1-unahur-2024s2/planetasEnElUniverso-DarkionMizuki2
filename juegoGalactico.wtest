@@ -1,0 +1,25 @@
+import personas.*
+
+describe "group of tests for pepita" {
+  const p1=new Persona(nombre="camilo",edad=48)
+  const p2=new Persona(nombre="ana",edad=16)
+  const p3=new Persona(nombre="fatima",edad=10)
+  test "Camilo una persona que inicia gastandose 44 monedas, es una persona destacada
+  ya que su edad esta entre 18 y 65" 
+  {
+    p1.gastar_Monedas(44)
+    assert.that(p1.esDestacado())
+  }
+  test "Ana una persona que tiene una edad de 16 años y gasta toda sus monedas
+  , no es una persona destacada" 
+  {
+    p2.gastar_Monedas(20)
+    assert.notThat(p2.esDestacado())
+  }
+  test "Fatima una persona que tiene una edad de 10 años y gana 1000 monedas,
+  es una persona destacada" 
+  {
+    p3.ganar_Monedas(1000)
+    assert.that(p3.esDestacado())
+  }
+}
