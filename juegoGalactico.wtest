@@ -1,4 +1,6 @@
 import personas.*
+import construcciones.*
+import planetas.*
 
 describe "group of tests for pepita" {
   const p1=new Persona(nombre="camilo",edad=48)
@@ -22,4 +24,19 @@ describe "group of tests for pepita" {
     p3.ganar_Monedas(1000)
     assert.that(p3.esDestacado())
   }
+}
+
+describe "Pruebas"{
+  const p1=new Persona(nombre="camilo",edad=10)
+  const p2=new Persona(nombre="ana",edad=30)
+  const p3=new Persona(nombre="fatima",edad=57)
+  const p4=new Persona(nombre="pedro",edad=64)
+  const m1=new Muralla(longitud=4)
+  const m2=new Muralla(longitud=4)
+  const mu=new Museo(superficie=4,indiceDeImportancia=5)
+  const unP=new Planeta(habitantes=[p1,p2,p3,p4],construcciones=[m1,m2,mu])
+  test"Ana, Fatima y Pedro son de la delegacion diplomatica"{
+    assert.equals([p2,p3,p4],unP.delegacionDiplomatica())
+  }
+  
 }
