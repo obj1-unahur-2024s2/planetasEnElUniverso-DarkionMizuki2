@@ -1,6 +1,6 @@
 class Planeta
 {
-    const habitantes
+    const property habitantes
     const construcciones
 
     method delegacionDiplomatica()

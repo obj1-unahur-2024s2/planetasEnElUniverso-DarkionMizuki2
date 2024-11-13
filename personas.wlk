@@ -4,7 +4,7 @@ class JuegoGalactico{
 class Persona{
   const nombre
   var edad
-  var recursos=20 //monedas que tiene una persona que puede ir variando
+  var property recursos=20 //monedas que tiene una persona que puede ir variando
 
   method esDestacado()
   {
